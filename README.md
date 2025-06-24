@@ -2,6 +2,12 @@
 
 Dit project bevat een eenvoudige muziek-generator en speler, geschreven in JavaScript en PHP.
 
+## Info
+- 60 seconden per generatie: elke muziekstuk duurt 1 minuut.
+- 44.100 Hz sample rate: 44.100 samples per seconde.
+- 32-bit float samples: hoge precisie tijdens generatie en afspelen.
+Bij export naar WAV wordt 16-bit PCM gebruikt.
+
 ## Bestanden
 
 - `app.js` — Hoofd JavaScript-bestand voor de applicatie

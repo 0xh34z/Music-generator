@@ -86,7 +86,24 @@
         document.getElementById('generate-melody').addEventListener('click', () => {
             const scale = document.getElementById('scale').value;
             const bpm = parseInt(document.getElementById('bpm').value, 10);
-            downloadRandomMelodyWav({ scale, bpm });
+            // Inputvalidatie
+            if (isNaN(bpm) || bpm < 40 || bpm > 240) {
+                alert('BPM moet tussen 40 en 240 liggen.');
+                return;
+            }
+            // numNotes kan via prompt of extra input, maar standaard 16
+            let numNotes = 16;
+            if (window.prompt) {
+                const userNumNotes = prompt('Aantal noten (1-64, standaard 16):', '16');
+                if (userNumNotes !== null) {
+                    numNotes = parseInt(userNumNotes, 10);
+                    if (isNaN(numNotes) || numNotes < 1 || numNotes > 64) {
+                        alert('Aantal noten moet tussen 1 en 64 liggen.');
+                        return;
+                    }
+                }
+            }
+            downloadRandomMelodyWav({ scale, bpm, numNotes });
             fetch('melody_counter.php', { method: 'POST' })
                 .then(res => res.json())
                 .then(data => {

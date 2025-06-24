@@ -23,9 +23,9 @@ Dit project bevat een eenvoudige muziek-generator en speler, geschreven in JavaS
 
 ## Gebruik
 
-- Genereer muziek via de webinterface.
+- Genereer muziek via de webinterface of navigeer naar mijn website: [https://h34z.tech/Audio](https://h34z.tech/Audio)
 - Speel de gegenereerde muziek direct af.
 
 ## Licentie
 
-Dit project is open source. Voeg hier je licentie toe indien gewenst.
+Dit project is open source.
